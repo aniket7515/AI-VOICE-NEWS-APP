@@ -2,7 +2,9 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap');
 
-
+.App{
+  margin-top: 3500px;
+}
 .main{
   display: flex;
   justify-content: center;
@@ -23,4 +25,29 @@
   border: 1px solid grey;
   padding: 20px;
   border-radius: 10px;
+}
+.news-image{
+  width: 100%;
+}
+.news-title{
+  font-size: 25px;
+  font-weight: 700;
+}
+.news-content{
+  font-size: 16px;
+}
+.news-author{
+  font-style: italic;
+  font-size: 14px;
+}
+.news-date{
+  font-size: 14px;
+}
+.select{
+  margin: 20px;
+}
+
+.select-box{
+  width: 200px;
+  height: 40px;
 }
