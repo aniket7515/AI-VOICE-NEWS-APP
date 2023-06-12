@@ -1,10 +1,12 @@
 
 import { useEffect, useState } from 'react';
 import { getNews } from '../Service/getNews';
+import alanBtn from '@alan-ai/alan-sdk-web';
 import moment from 'moment'
 const NewsData = () => {
     const [newsData, setNewsData] = useState([])
     const [selectOption, setSelectOption]=useState('')
+    const alanKey=`7a81ec737fce3a93925e21f58624025a2e956eca572e1d8b807a3e2338fdd0dc/stage`
     const getAllNews = async () => {
         let data = await getNews(selectOption);
         setNewsData(data.data.articles)
@@ -13,7 +15,15 @@ const NewsData = () => {
     const selectCategory=(event)=>{
         setSelectOption(event.target.value);
     }
-
+    useEffect(() => {
+        alanBtn({
+            key: alanKey,
+            onCommand: (commandData) => {
+                console.log(commandData.data);
+              setSelectOption(commandData.data)
+            }
+        });
+      }, []);
     useEffect(() => {
         getAllNews()
     }, [selectOption])
@@ -23,7 +33,7 @@ const NewsData = () => {
             <h1>Voice news</h1>
             <label for="cars">Choose a category:</label>
             <div className='select'>
-                <select className='select-box' name="category" id="category" onChange={selectCategory} >
+                <select className='select-box' name="category" id="category" onChange={selectCategory} > value={selectOption}
                     <option value="general">General</option>
                     <option value="health">Health</option>
                     <option value="business">Business</option>
