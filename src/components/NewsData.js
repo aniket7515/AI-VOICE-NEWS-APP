@@ -38,6 +38,9 @@ const NewsData = () => {
                     <option value="health">Health</option>
                     <option value="business">Business</option>
                     <option value="sports">Sports</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="science">Science</option>
+                    <option value="technology">Technology</option>
                 </select>
             </div>
             <div className='grid-main'>
