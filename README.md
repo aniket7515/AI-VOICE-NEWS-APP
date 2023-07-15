@@ -1,5 +1,6 @@
 !! Newsify - Voice-Enabled News at Your Fingertips.
 <br>
+
 ○ In a world where information is at our fingertips, one web application revolutionizes the way we consume news. 
 <br>
 
@@ -20,3 +21,6 @@ Found an interesting article? Share it with your friends and family directly fro
 <br>
 
 ○ Join "Newsify" today, and empower yourself with the latest news from around the world, all at your command. Stay informed, stay connected
+
+!! Tech Stack !!
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 

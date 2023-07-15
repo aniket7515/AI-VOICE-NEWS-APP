@@ -43,10 +43,10 @@ const NewsData = () => {
                     <option value="technology">Technology</option>
                 </select>
             </div>
-            <div className='grid-main'>
+            <div className='grid-main' >
                 {newsData?.map((news) => {
                     return (
-                        <div className='grid-child'>
+                        <div className='grid-child' >
                             <img className='news-image' src={news?.urlToImage} alt="" />
                             <p className='news-title'> {news?.title} </p>
                             <p className='news-content'> {news?.content} </p>
